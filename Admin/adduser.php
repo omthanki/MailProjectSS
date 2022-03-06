@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +17,9 @@ session_start();
 
 <body style="background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);">
 
+
+    <?php include('nav.php');?>
+
     <div class="container">
         <form action="adddb.php" method="POST">
             <div id="login_page">
@@ -24,6 +27,11 @@ session_start();
                     <div class="card mx-auto form-group col-5">
                         <div class="card-body">
                             <h3 class="card-title" style="text-align: center; margin-bottom: 10%;">Add recipients</h3>
+                            <div class="form-group mb-3">
+                            <label for="name" class="mx-2" style="display: block; text-align: left; line-height: 150%; font-size: 1.5em;">Name:</label>
+                                <input type="text" class="form-control" aria-label="addemail" aria-describedby="basic-addon1" id="form_uname" name="name">
+                                <span class="error_form" id="uname_error_message"></span>
+                            </div>
                             <div class="form-group mb-3">
                             <label for="email" class="mx-2" style="display: block; text-align: left; line-height: 150%; font-size: 1.5em;">Email ID:</label>
                                 <input type="text" class="form-control" placeholder="abc@example.com" aria-label="addemail" aria-describedby="basic-addon1" id="form_uname" name="email" value="">
